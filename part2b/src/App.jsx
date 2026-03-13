@@ -29,12 +29,15 @@ const App = () => {
     console.log('person name ', persons[0].name.toLowerCase())
     if (persons.find(person => (person.name).toLowerCase() === searchName.toLowerCase())) {
       const found = persons.find(person => (person.name).toLowerCase() === searchName.toLowerCase())
-      const newFoundContact = {
+      if (found) {
+        const newFoundContact = {
         name: searchName,
         phone: found.phone
       }
       console.log(found.phone)
       setFoundPerson(newFoundContact)
+      }
+      
     }
   }
 
