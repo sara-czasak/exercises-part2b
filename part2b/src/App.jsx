@@ -15,8 +15,13 @@ const App = () => {
     event.preventDefault()
     const newPerson = {
       name: newName
+    }      
+    if (persons.find(person => person.name === newPerson.name)) {
+      alert(`I\'m sorry, the name ${newPerson.name} is already in the phone book`)
+    } else {
+      setPersons(persons.concat(newPerson))
     }
-    setPersons(persons.concat(newPerson))
+    
     // console.log(persons)
   }
 
