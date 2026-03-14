@@ -1,13 +1,6 @@
 import { useState } from 'react'
-
-const Person = ({name, number}) => {
-  // console.log(name)
-  return <p>{name}: {number}</p>
-}
-
-const Found = ({name, number}) => {
-  return <p>{name}: {number}</p>
-}
+import Person from './components/Person'
+import Found from './components/Found'
 
 const App = () => {
   const [persons, setPersons] = useState([
